@@ -1,0 +1,56 @@
+This is for Display /  same can be done for creating 
+
+Step 1 - list out all the details in a single recipe 
+Step 2 - wireframe/react component of each recipe 
+Step 3 - List of recipe's and display on recipe page 
+Step 4 - Create a API to return JSON - CRUD Application 
+Step 5 - Design a JSON structure / mongoDB for recipe list 
+Step 6 - Return the actual data from mongoDB 
+
+Step 1 - list out all the details in a single recipe 
+#####  This is for the main recipe/kitchen page
+Step 1.1 - Headline/Title 
+Step 1.2 - Catogory
+Step 1.3 - Images
+Step 1.4 - Ingredients
+Step 1.5 - Methods/ Preprations 
+
+Processing - User Schema -> Recipe Schema -> Catogory Schema ->  Image Schema -> Ingredient Schema -> Methods Schema 
+
+Making different schema to elaborate in future* 
+
+ Sample Code 
+Recipe Schema
+const schema = new Schema({
+    name: { type: String, required: true },
+    recipe: {type: String, required: true },
+    ingredients: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Ingredient'
+    }],
+    creator: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'User'
+    },
+    createdDate: { type: Date, default: Date.now }
+});
+Ingredient Schema 
+ingredients: [{
+        ingredient: {type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient'}
+        quantity: {type: Number, required: false},
+        quantityType: {type: String, required: false}
+    }],
+
+Catogory Schema 
+categorySchema = new mongoose.Schema(
+    {
+        name: {
+            type: String,
+            trim: true,
+            required: true,
+            maxlength: 32,
+            unique: true
+        }
+    },
+    { timestamps: true }
+);

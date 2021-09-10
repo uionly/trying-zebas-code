@@ -1,0 +1,89 @@
+body {
+  background: radial-gradient(at 50% 0, rgb(199, 164, 8), transparent 70%),
+    linear-gradient(0deg, rgb(199, 164, 8), transparent 50%) bottom;
+  background-size: 100%;
+}
+
+.navBar,
+.footer {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(199, 164, 8);
+  margin-top: none;
+  padding: auto;
+}
+.brand_name,
+.search_bar,
+.login_register,
+.recipe,
+.kitchen {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 12px;
+  border-color: black;
+  height: 40px;
+  width: 90px;
+}
+.search_bar {
+  margin-left: 150px;
+  width: 400px;
+}
+.recipe {
+  right: 250px;
+}
+.kitchen {
+  right: 130px;
+}
+.login_register {
+  right: 20px;
+  word-wrap: break-word;
+}
+#para {
+  text-align: center;
+  font-size: small;
+  font-weight: bolder;
+}
+#gallery_slide_img,
+.about_me {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 400px;
+  margin-top: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.about_me {
+  background-color: rgb(230, 213, 139);
+  text-align: center;
+  height: auto;
+  padding: 3%;
+  width: 80%;
+  -moz-box-shadow: inset 0 0 10px rgb(199, 164, 8);
+  -webkit-box-shadow: inset 0 0 10px rgb(199, 164, 8);
+  box-shadow: inset 0 0 10px rgb(199, 164, 8);
+  border-radius: 5px;
+  font-style: italic;
+}
+.footer {
+  margin-bottom: none;
+}
+.contact,
+.copy_rights {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 100px;
+  color: black;
+  background-color: white;
+  border-radius: 12px;
+  border-color: black;
+  height: 40px;
+  width: 90px;
+}
+.copy_rights {
+  right: 0px;
+  margin-right: 100px;
+}

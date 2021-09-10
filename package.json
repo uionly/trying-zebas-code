@@ -1,0 +1,39 @@
+{
+  "name": "cookbook",
+  "version": "1.0.0",
+  "description": "### Recipe app - MERN CookBook is an app where you can find recipes directly from the genuine real life chef's, who love to cook and are here to share their own recipes. You can also share your recipe or try some that are available. This app is an inspiration from “Pinterest” and my love for food.",
+  "main": "app.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && HTTPS=true && npm run start:prod || npm run start:dev",
+    "start:prod": "node app.js",
+    "start:dev": "concurrently -n 'server,client' -c 'green,yellow' \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeba-tahreen/CookBook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeba-tahreen/CookBook/issues"
+  },
+  "homepage": "https://github.com/zeba-tahreen/CookBook#readme",
+  "dependencies": {
+    "antd": "^4.16.13",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.0.2",
+    "express": "^4.17.1",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3",
+    "nodemailer": "^6.4.16",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^12.1.0"
+  }
+}
